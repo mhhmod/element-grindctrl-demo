@@ -28,15 +28,21 @@ export function CinematicBreak() {
   }, []);
 
   return (
-    <section aria-label="Element way" className="bg-[#f6f1e8] py-16 md:py-24">
+    <section aria-label="The Element way" className="bg-[#ede4d3] py-24 md:py-36">
       <div ref={ref} className="mx-auto max-w-[1100px] px-5 text-center md:px-10">
         <Reveal>
           <p className="eyebrow text-[#671e2e]">The Element way</p>
         </Reveal>
-        <h2 className="font-display mt-6 text-[clamp(2.4rem,6vw,5rem)] leading-[1.02]">
+        <h2 className="font-display mt-8 text-[clamp(2.6rem,7vw,5.6rem)] leading-[1.0] tracking-tight">
           <span className="cinematic-line block">We listen. We deliver.</span>
           <span className="cinematic-line block italic font-light text-[#671e2e]">You move.</span>
         </h2>
+        <Reveal delay={0.15}>
+          <p className="mx-auto mt-8 max-w-[48ch] text-[15px] leading-relaxed text-[#3d3430]">
+            One consultant who knows the compound — from first call to keys.
+            Egypt and the Gulf, one network.
+          </p>
+        </Reveal>
       </div>
     </section>
   );

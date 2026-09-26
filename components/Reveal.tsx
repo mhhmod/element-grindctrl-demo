@@ -44,3 +44,38 @@ export function ImageReveal({ children, className }: { children: ReactNode; clas
     </motion.div>
   );
 }
+
+export function Masked({
+  lines,
+  className,
+  lineClassName,
+  delay = 0,
+  stagger = 0.12,
+  as: Tag = "div"
+}: {
+  lines: ReactNode[];
+  className?: string;
+  lineClassName?: string;
+  delay?: number;
+  stagger?: number;
+  as?: "div" | "h1" | "h2" | "p";
+}) {
+  const reduce = useReducedMotion();
+  if (reduce) return <Tag className={className}>{lines.map((l, i) => <span key={i} className="block">{l}</span>)}</Tag>;
+  return (
+    <Tag className={className} aria-label={undefined}>
+      {lines.map((l, i) => (
+        <span key={i} className={`mask-line ${lineClassName ?? ""}`}>
+          <motion.span
+            initial={{ y: "112%" }}
+            whileInView={{ y: "0%" }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 1.05, delay: delay + i * stagger, ease: [0.22, 1, 0.36, 1] }}
+          >
+            {l}
+          </motion.span>
+        </span>
+      ))}
+    </Tag>
+  );
+}

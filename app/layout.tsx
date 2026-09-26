@@ -17,14 +17,14 @@ const sans = Archivo({
 });
 
 export const metadata: Metadata = {
-  title: "Find Your Element — A GrindCTRL Concept for Element Real Estate",
+  title: "Element Real Estate — Find Your Element",
   description:
-    "An art-directed outreach concept reimagining Element Real Estate: North Coast, New Cairo, Sheikh Zayed and Dubai through one expert consultant network. Independent demo by GrindCTRL.",
+    "Marassi to Soul to West Cairo to Dubai — through the consultant who knows your compound. An independent digital concept by GrindCTRL.",
   metadataBase: new URL("https://element.grindctrl.cloud"),
   openGraph: {
-    title: "Find Your Element — Element Real Estate, re-art-directed",
+    title: "Element Real Estate — Find Your Element",
     description:
-      "Coast to Cairo to Dubai. One network, one consultant who knows your compound. Concept demo by GrindCTRL.",
+      "Coast to Cairo to Dubai. One network, one consultant who knows your compound.",
     type: "website"
   }
 };
